@@ -82,4 +82,6 @@ typings/
 .dynamodb/
 
 # Project Ignore
-
+**/package-lock.json
+package-lock.json
+**/config/
