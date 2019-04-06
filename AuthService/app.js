@@ -1,8 +1,11 @@
+'use strict'
+// global variable
+logger = require('./app/helpers/logHandler');
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const logger = require('morgan');
 
 const renderRouter = require('./routes/render');
 const authApiRouter = require('./routes/authApi');
@@ -13,7 +16,6 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
