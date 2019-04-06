@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="AuthService" type="NodeJSConfigurationType" path-to-js-file="AuthService/bin/www" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="DEBUG" value="tccsample:*" />
+    </envs>
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+      <browser url="http://localhost:3000/" />
+    </EXTENSION>
+    <method v="2" />
+  </configuration>
+</component>
