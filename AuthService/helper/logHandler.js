@@ -1,9 +1,8 @@
 'use strict';
 
 const { createLogger, format, transports } = require('winston');
-const chalk = require('chalk');
 const {combine, timestamp, label, printf} = format;
-const config = process.env.NODE_ENV;
+const logLevel = process.env.NODE_ENV;
 
 // 로그 출력 포맷 지정
 const myFormat = printf(info => {
@@ -15,7 +14,7 @@ const myFormat = printf(info => {
 global.logger = createLogger({
 	transports: [
 		new transports.Console({
-			level: config.logLevel,
+			level: logLevel,
 			timestamp: true,
 			showLevel: true,
 			colorize: true

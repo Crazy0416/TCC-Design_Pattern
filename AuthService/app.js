@@ -1,6 +1,6 @@
 'use strict'
 // global variable
-logger = require('./app/helpers/logHandler');
+logger = require('./helper/logHandler');
 
 const createError = require('http-errors');
 const express = require('express');
