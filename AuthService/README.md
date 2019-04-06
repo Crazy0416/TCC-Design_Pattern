@@ -15,7 +15,7 @@
 	- 로그인
 		- POST /auth/api/member.login
 	- 로그아웃
-		- POST /auth/api/member.logout
+		- DELETE /auth/api/member.logout
 	- 회원 정보 수정
 		- PUT /auth/api/member.modify
 	- 회원 삭제
