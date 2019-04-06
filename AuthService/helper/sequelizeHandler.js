@@ -4,7 +4,8 @@ const Sequalize = require('sequelize');
 const sequalize = new Sequalize('database', dbConfig.username, dbConfig.password, {
 	host: dbConfig.host,
 	user: dbConfig.user,
-	database: dbConfig.database
+	database: dbConfig.database,
+	dialect: 'mysql'
 });
 
 

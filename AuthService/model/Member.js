@@ -1,12 +1,13 @@
 'use strict';
 const Sequelize = require('sequelize');
-const sequelize = require('../helper/sequalizeHandler');
+const sequelize = require('../helper/sequelizeHandler');
 
-module.exports = class Member extends Sequalize.Model {};
+class Member extends Sequelize.Model {};
 
 Member.init({
 	uid: {
 		type: Sequelize.STRING,
+		allowNull: false,
 		validate: {
 			notNull: {
 				msg: "Member must have id"
@@ -18,6 +19,7 @@ Member.init({
 	},
 	password: {
 		type: Sequelize.STRING,
+		allowNull: false,
 		validate: {
 			notNull: {
 				msg: "Member must have password"
@@ -29,6 +31,7 @@ Member.init({
 	},
 	name: {
 		type: Sequelize.STRING,
+		allowNull: false,
 		validate: {
 			notNull: {
 				msg: "Member must have name"
